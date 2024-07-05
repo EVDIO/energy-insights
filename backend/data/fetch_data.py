@@ -55,14 +55,21 @@ def download_data(dataset_name, format, limit=None):
 
 # Example usage
 if __name__ == "__main__":
-    dataset_name = "CO2Emis"
-    
+
+    dataset_name = "PowerSystemRightNow"
+    # dataset_name = "ConsumptionIndustry"
+    # dataset_name = "Forecasts_5Min"
+    # dataset_name = "ConsumptionPerGridarea"
+
     # Example 1: Fetch data with specific parameters
-    start = "2022-01-01T00:00"
-    end = "2022-01-01T01:00"
-    columns = "Minutes5DK,PriceArea,CO2Emission"
-    filter_params = {"PriceArea": ["DK1"]}
-    sort = "CO2Emission desc"
+    start = None
+    end = None
+    #columns = "Minutes5DK,PriceArea,CO2Emission"
+    columns = None
+    #filter_params = {"PriceArea": ["DK1"]}
+    filter_params = None
+    #sort = "CO2Emission desc"
+    sort = None
     limit = 4
     
     data = fetch_data(dataset_name, start=start, end=end, columns=columns, filter=filter_params, sort=sort, limit=limit)
